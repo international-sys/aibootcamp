@@ -1,7 +1,12 @@
 "use client"
 
 export function ChannelTalk() {
-  const CHANNEL_PLUGIN_KEY = "dd35e3a2-feff-46df-8e9f-56ac0151e1e7"
+  const CHANNEL_PLUGIN_KEY = process.env.NEXT_PUBLIC_CHANNEL_TALK_KEY
+
+  if (!CHANNEL_PLUGIN_KEY) {
+    console.error("Channel Talk Plugin Key is not defined")
+    return null
+  }
 
   if (typeof window !== "undefined") {
     ;(function () {
@@ -9,10 +14,10 @@ export function ChannelTalk() {
       if (w.ChannelIO) {
         return w.console.error("ChannelIO script included twice.")
       }
-      var ch = function () {
+      var ch: any = function () {
         ch.c(arguments)
       }
-      ch.q = [] as any[]
+      ch.q = []
       ch.c = function (args: any) {
         ch.q.push(args)
       }
