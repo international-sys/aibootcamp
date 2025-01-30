@@ -15,6 +15,20 @@ export const metadata: Metadata = {
   title: "AI 노코드 웨비나 | 2시간 만에 완성하는 자동화 시스템",
   description: "AI와 노코드로 만드는 자동화된 웨비나 등록 시스템. 2시간 만에 완성하는 구글 시트 기반 CRM, 자동 이메일 발송, 수강생 관리 자동화까지!",
   keywords: ["AI", "노코드", "웨비나", "자동화", "CRM", "업무 효율", "구글 시트"],
+  openGraph: {
+    title: "AI 노코드 웨비나 | 2시간 만에 완성하는 자동화 시스템",
+    description: "AI와 노코드로 만드는 자동화된 웨비나 등록 시스템",
+    images: [
+      {
+        url: "/katalk-image.png", // 이미지 경로
+        width: 1200,
+        height: 630,
+        alt: "AI 노코드 웨비나",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
