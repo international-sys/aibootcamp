@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "AI와 노코드로 만드는 자동화된 웨비나 등록 시스템",
     images: [
       {
-        url: "/katalk-image.png", // 이미지 경로
+        url: "https://aibootcamp.store/katalk-image.png",
         width: 1200,
         height: 630,
         alt: "AI 노코드 웨비나",
